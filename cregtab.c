@@ -70,7 +70,7 @@ main(i32 argc, string argv[])
     i32    *width  = { 0 };
     string *cols   = { getcols(argv[2], &width) };
     u32    length  = { ptr_len(cols, sizeof(string)) };
-    string *groups = { calloc(length+2, sizeof(*groups)) };
+    string *groups = { calloc(length+1, sizeof(*groups)) };
     string re      = { argv[1] };
     FILE   *file   = { fopen(argv[3], "r") };
     string line    = { 0 };
